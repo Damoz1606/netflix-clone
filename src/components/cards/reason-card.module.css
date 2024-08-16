@@ -1,0 +1,15 @@
+.container {
+    position: relative;
+    overflow: hidden;
+    background-image: linear-gradient(320deg,
+            rgba(148, 0, 98, .25) 0%,
+            rgba(52, 86, 134, .25) 100%);
+    transition: transform .3s ease-out;
+}
+
+.container>.inner {
+    margin: rem(16px) rem(12px);
+    display: flex;
+    flex-direction: column;
+    gap: rem(32px);
+}

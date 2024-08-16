@@ -1,28 +1,37 @@
 "use client"
 
-import { Grid, rem, Input, Button, Text, Flex } from '@mantine/core'
+import { Grid, rem, Input, Button, Text, Box, Flex } from '@mantine/core'
 import { IconChevronRight } from '@tabler/icons-react'
 import React from 'react'
 
 const GetStartedForm: React.FC = () => {
+
     return (
         <Flex
-            maw={rem(536)}
             direction='column'
-            justify='center'
-            gap={rem(16)}>
-            <Text ta='center'>Ready to watch? Enter your email to create or restart your memebership</Text>
-            <Grid gutter={rem(4)}>
-                <Grid.Col span={8}>
+            gap={rem(16)}
+            maw={rem(536)}>
+            <Text
+                ta='center'
+                fw={300}
+                size='lg'>
+                Ready to watch? Enter your email to create or restart your memebership.
+            </Text>
+            <Grid gutter={rem(8)}>
+                <Grid.Col span={7}>
                     <Input
-                        size='lg'
+                        type='email'
+                        size='xl'
                         placeholder="Email address" />
                 </Grid.Col>
-                <Grid.Col span={4}>
+                <Grid.Col span={5}>
                     <Button
-                        size='lg'
+                        variant='filled'
+                        size='xl'
                         rightSection={(<IconChevronRight stroke={1.5} />)}
-                        fullWidth>Get Started</Button>
+                        fullWidth>
+                        Get Started
+                    </Button>
                 </Grid.Col>
             </Grid>
         </Flex>
