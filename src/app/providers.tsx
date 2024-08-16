@@ -1,11 +1,17 @@
 "use client"
-import { MantineProvider } from '@mantine/core'
-import React, { useEffect, useState } from 'react'
+import { createTheme, MantineProvider } from '@mantine/core'
+import React from 'react'
+
+const theme = createTheme({
+    primaryColor: 'red'
+});
 
 const Providers = ({ children }: { children: React.ReactNode }) => {
 
     return (
-        <MantineProvider>
+        <MantineProvider
+            theme={theme}
+            defaultColorScheme='dark'>
             {children}
         </MantineProvider>
     )

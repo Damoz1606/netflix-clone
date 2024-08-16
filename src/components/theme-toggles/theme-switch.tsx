@@ -17,7 +17,7 @@ const ThemeSwitch = () => {
 
     const sunIcon = (
         <IconSun
-            style={{ width: rem(16), height: rem(16) }}
+            style={{ width: rem(12), height: rem(12) }}
             stroke={2.5}
             color={theme.colors.yellow[4]}
         />
@@ -25,7 +25,7 @@ const ThemeSwitch = () => {
 
     const moonIcon = (
         <IconMoonStars
-            style={{ width: rem(16), height: rem(16) }}
+            style={{ width: rem(12), height: rem(12) }}
             stroke={2.5}
             color={theme.colors.blue[6]}
         />
@@ -37,7 +37,7 @@ const ThemeSwitch = () => {
         <Switch
             onChange={() => setColorScheme(colorScheme === 'dark' ? 'light' : 'dark')}
             checked={colorScheme === 'dark'}
-            size="md"
+            size="xs"
             color="dark.4"
             onLabel={sunIcon}
             offLabel={moonIcon} />
