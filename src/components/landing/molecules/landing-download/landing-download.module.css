@@ -1,0 +1,47 @@
+.wrapper {
+  z-index: 1;
+  position: absolute;
+  overflow: hidden;
+  left: 50%;
+  bottom: 5%;
+  transform: translateX(-50%);
+  margin: 0 auto;
+  background: rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  width: 60%;
+  min-width: rem(240);
+  padding: rem(4) rem(10);
+  border: 2px solid rgba(128, 128, 128, 0.7);
+  border-radius: rem(12px);
+
+  & > .thumbnail {
+    margin: 0 rem(16px) 0 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+
+    & > img {
+      height: rem(48);
+      border: 0;
+      border-radius: rem(3px);
+    }
+  }
+
+  & > .description {
+    text-align: left;
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin: rem(4.8px) 0;
+  }
+}
+
+.downloadStatus {
+  width: rem(48px);
+  height: rem(48px);
+  display: block;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  flex-grow: 0;
+  flex-shrink: 0;
+}

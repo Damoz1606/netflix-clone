@@ -1,5 +1,5 @@
 import FAQCollapse from '@/components/collapse/faq-collapse/faq-collapse'
-import { Title } from '@mantine/core'
+import { Box, Flex, rem, Title } from '@mantine/core'
 import React from 'react'
 
 const FAQs: { title: string, content: string }[] = [
@@ -31,14 +31,16 @@ const FAQs: { title: string, content: string }[] = [
 
 const FAQ: React.FC = () => {
     return (
-        <>
-            <Title order={3}>Frequently Asked Questions</Title>
+        <Flex
+            w='100%'
+            direction='column'
+            gap={rem(8)}>
             {
                 FAQs.map((e, index) => (
                     <FAQCollapse key={index} {...e} />
                 ))
             }
-        </>
+        </Flex>
     )
 }
 

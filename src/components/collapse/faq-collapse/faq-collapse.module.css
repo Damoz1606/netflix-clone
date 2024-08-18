@@ -1,47 +1,53 @@
 .container {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .trigger {
-    width: 100%;
-    padding: rem(16px);
-    background-color: var(--mantine-color-dark-4);
-    border-radius: var(--mantine-radius-sm);
-    transition: border-radius .5s ease-out;
+  width: 100%;
+  padding: rem(24px) rem(32px);
+  background-color: var(--mantine-color-dark-6);
+  border-radius: var(--mantine-radius-sm);
+  transition: border-radius 0.5s ease-out;
+
+  @media (min-width: $mantine-breakpoint-md) {
+    & span {
+      font-size: rem(24px);
+    }
+  }
 }
 
 .container.opened .trigger {
-    border-end-end-radius: 0;
-    border-end-start-radius: 0;
+  border-end-end-radius: 0;
+  border-end-start-radius: 0;
 }
 
 .container.opened .collapse {
-    border-end-end-radius: var(--mantine-radius-sm);
-    border-end-start-radius: var(--mantine-radius-sm);
+  border-end-end-radius: var(--mantine-radius-sm);
+  border-end-start-radius: var(--mantine-radius-sm);
 }
 
 .container svg {
-    transition: transform .2s ease-out;
+  transition: transform 0.2s ease-out;
 }
 
 .container.opened svg {
-    transform: rotateZ(45deg);
+  transform: rotateZ(45deg);
 }
 
 .container .inner {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .collapse {
-    padding: rem(32px) rem(24px);
+  padding: rem(32px) rem(24px);
 }
 
 .collapse.inner {
-    background-color: var(--mantine-color-dark-6);
+  background-color: var(--mantine-color-dark-8);
 }
 
 .preLine {
-    white-space: pre-line;
+  white-space: pre-line;
 }

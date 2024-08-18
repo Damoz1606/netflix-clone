@@ -1,6 +1,6 @@
 "use client"
 
-import { Box, Group, Collapse, Text, UnstyledButton, Grid, rem } from '@mantine/core'
+import { Box, Group, Collapse, Text, UnstyledButton, Grid, rem, Flex } from '@mantine/core'
 import { IconPlus } from '@tabler/icons-react'
 import React, { useCallback, useState } from 'react'
 import classes from './faq-collapse.module.css'
@@ -30,12 +30,22 @@ const FAQCollapse: React.FC<FAQCollapseProps> = ({
                         <Grid.Col
                             className={classes.inner}
                             span={11}>
-                            <Text fw='bold'>{title}</Text>
+                            <Flex
+                                h='100%'
+                                align='center'>
+                                <Text component='span'>
+                                    {title}
+                                </Text>
+                            </Flex>
                         </Grid.Col>
                         <Grid.Col
                             className={classes.icon}
                             span={1}>
-                            <IconPlus />
+                            <Flex
+                                h='100%'
+                                align='center'>
+                                <IconPlus />
+                            </Flex>
                         </Grid.Col>
                     </Grid>
                 </UnstyledButton>
